@@ -1,29 +1,21 @@
-# Whatsapp-automation
+# WhatsApp Automation
 
-Whatsapp-automation is a web scripting in python made for message specifically for whatsapp. It ask user to enter name or group name, message type ,repeate message or to send via file.
+WhatsApp-Automation is a web scraper created using selenium in python, made for sending multiple messages in whatsapp. It supports sending multiple messages and also an entire text file as a single text message to different users
 
 It uses selenium and chromedriver.
-It provide option like: 
 
-       1: single_user,
-       2: multi_user,
-       3: send_file_contents,
-       4: repeat_messages.
+# How to use:
 
-# Step to use it:
-Step 1 : Download ZIP file of this repository.
+Step 1 : Download ZIP file or Fork this repository.
 
-Step 2 : visit  https://sites.google.com/a/chromium.org/chromedriver/downloads and download chromedrive.
-         (Download the driver that matches the version number of your chrome.)
-         
-Step 3 : Install selenium using "pip install selenium"
+Step 2 : Visit  https://sites.google.com/a/chromium.org/chromedriver/downloads and download chromedriver that matches with the version of your chrome browser.
 
-Step 4 : Click on Load Unpacked and select your Unzip folder(unziped folder of this repo).
+Step 3 : Install selenium using "pip install selenium" command.
 
-Step 5 : Create a new user profile in chrome and provide its path to user-data-dir so that you only need to scan the QR code only once.
-         (Change that path in code.)
-         
-Step 5 : Now you are ready to use it.
+Step 4 : Create a new user profile in chrome and provide its path to user-data-dir in ChromeOptions so that you need to scan the QR code only once. (Only add that path in whatsapp_automation.py file)
 
+Step 5 : Now you are ready to go.
 
+# Contribute to this repo
 
+Feel free to fork this repo and make some changes, add more functionalities and send pull requests.
