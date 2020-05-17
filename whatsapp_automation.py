@@ -5,7 +5,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 options = webdriver.ChromeOptions()
 
-# create a new user profile in chrome and provide its path to user-data-dir so that you need to scan the QR code only once
+# create a new user profile in chrome and provide its path to user-data-dir so that it won't affect your main user profile and you need to scan the QR code only once
 options.add_argument("user-data-dir=C:\\Users\\BHAVIK DODIA\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1")
 
 # opens the chrome browser
