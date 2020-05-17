@@ -1,8 +1,6 @@
 # WhatsApp Automation
 
-WhatsApp-Automation is a web scraper created using selenium in python, made for sending multiple messages in whatsapp. It supports sending multiple messages and also an entire text file as a single text message to different users
-
-It uses selenium and chromedriver.
+WhatsApp-Automation is a web scraper created using selenium in python, made for sending multiple messages in whatsapp. It supports sending multiple messages and also an entire text file as a single text message to different users.
 
 # How to use:
 
