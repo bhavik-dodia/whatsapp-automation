@@ -1,4 +1,4 @@
-# whatsapp-automation
+# Whatsapp-automation
 
 Whatsapp-automation is a web scripting in python made for message specifically for whatsapp. It ask user to enter name or group name, message type ,repeate message or to send via file.
 
