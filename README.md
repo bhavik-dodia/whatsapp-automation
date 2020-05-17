@@ -8,7 +8,7 @@ It provide option like:
        1: single_user,
        2: multi_user,
        3: send_file_contents,
-       4: repeat_messages,
+       4: repeat_messages.
 
 # Step to do it:
 Step 1 : Download ZIP file of this repository.
