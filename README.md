@@ -10,7 +10,7 @@ It provide option like:
        3: send_file_contents,
        4: repeat_messages.
 
-# Step to do it:
+# Step to use it:
 Step 1 : Download ZIP file of this repository.
 
 Step 2 : visit  https://sites.google.com/a/chromium.org/chromedriver/downloads and download chromedrive.
