@@ -1,4 +1,5 @@
 import sys
+import time
 from selenium import webdriver
 from selenium.webdriver.common import keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -13,6 +14,7 @@ driver = webdriver.Chrome(options=options)
 
 # opens WhatsApp Web in browser
 driver.get('http://web.whatsapp.com')
+time.sleep(2)
 
 # sends multiple messages to a single user
 def single_user():
@@ -26,9 +28,11 @@ def single_user():
         profile.click()
 
         for msg in msgs:
-            msg_box = driver.find_element_by_class_name('_1Plpp')
+            time.sleep(0.5)
+            msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
             msg_box.send_keys(msg)
-            driver.find_element_by_class_name('_35EW6').click()
+            time.sleep(0.5)
+            driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button').click()
     except Exception as e:
         print(e)
     else:
@@ -45,11 +49,13 @@ def multi_user():
         for user in users:
             profile = driver.find_element_by_xpath(f'//span[@title = "{user}"]')
             profile.click()
-
+            time.sleep(0.5)
             for msg in msgs:
-                msg_box = driver.find_element_by_class_name('_1Plpp')
+                time.sleep(0.5)
+                msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
                 msg_box.send_keys(msg)
-                driver.find_element_by_class_name('_35EW6').click()
+                time.sleep(0.5)
+                driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button').click()
     except Exception as e:
         print(e)
     else:
@@ -68,14 +74,14 @@ def send_file_contents():
         for user in users:
             profile = driver.find_element_by_xpath(f'//span[@title = "{user}"]')
             profile.click()
-
-            msg_box = driver.find_element_by_class_name('_1Plpp')
+            time.sleep(0.5)
+            msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
 
             # WhatsApp sends the message when it detacts '\n' character at the end of any line, so perform (shift+enter) operation to give line break at the end of each line
             for line in msg:
                 ActionChains(driver).send_keys(line).perform()
                 ActionChains(driver).key_down(keys.Keys.SHIFT).key_down(keys.Keys.ENTER).key_up(keys.Keys.SHIFT).key_up(keys.Keys.ENTER).perform()
-            driver.find_element_by_class_name('_35EW6').click()
+            driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button').click()
     except Exception as e:
         print(e)
     else:
@@ -96,10 +102,13 @@ def repeat_messages():
 
             # to repeat messages in the same order in which they are given
             for i in range(count):
+                time.sleep(0.5)
                 for msg in msgs:
-                    msg_box = driver.find_element_by_class_name('_1Plpp')
+                    time.sleep(0.5)
+                    msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
                     msg_box.send_keys(msg)
-                    driver.find_element_by_class_name('_35EW6').click()
+                    time.sleep(0.5)
+                    driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button').click()
     except Exception as e:
         print(e)
     else:
