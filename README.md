@@ -14,7 +14,7 @@ WhatsApp-Automation is a web scraper created using selenium in python, made for 
 
 - Create a new user profile in chrome and provide its path to user-data-dir in ChromeOptions so that it won't affect your main user profile and you need to scan the QR code only once. (Only add that path in whatsapp_automation.py file) 🙍‍♂️
 
-- That'it! Now your whatsapp can send multiple messages to multiple users automatically 😏
+- That's it! Now your whatsapp can send multiple messages to multiple users automatically 😏
 
 # Contribute to this repo
 
