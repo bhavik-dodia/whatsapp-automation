@@ -75,7 +75,7 @@ def send_file_contents():
             profile = driver.find_element_by_xpath(f'//span[@title = "{user}"]')
             profile.click()
             time.sleep(0.5)
-            msg_box = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
+            driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]')
 
             # WhatsApp sends the message when it detacts '\n' character at the end of any line, so perform (shift+enter) operation to give line break at the end of each line
             for line in msg:
@@ -101,7 +101,7 @@ def repeat_messages():
             profile.click()
 
             # to repeat messages in the same order in which they are given
-            for i in range(count):
+            for _ in range(count):
                 time.sleep(0.5)
                 for msg in msgs:
                     time.sleep(0.5)
